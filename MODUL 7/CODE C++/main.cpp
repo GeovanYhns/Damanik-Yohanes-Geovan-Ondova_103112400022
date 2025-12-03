@@ -1,0 +1,36 @@
+#include <iostream>
+#include "stack.cpp"
+
+using namespace std;
+
+int main() {
+    Stack S;
+    createStack(S);
+
+    cout << "Hello World!" << endl;
+    pushAscending(S, 3);
+    pushAscending(S, 4);
+    pushAscending(S, 8);
+    pushAscending(S, 2);
+    pushAscending(S, 3);
+    pushAscending(S, 9);
+
+    printInfo(S);
+
+    cout << "balik stack" << endl;
+    balikStack(S);
+    printInfo(S); 
+    
+    while(!isEmpty(S)) { pop(S); }
+    
+    cout << "\n" << endl;
+    cout << "Masukkan angka: ";
+    
+    getInputStream(S);
+    printInfo(S); 
+    cout << "balik stack" << endl;
+    balikStack(S);
+    printInfo(S); 
+
+    return 0;
+}
